@@ -1,43 +1,37 @@
 <!DOCTYPE html>
-<html lang="bm">
+<html lang="nb">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.svg" />
     <title>FjaaS</title>
     <style>
-      :root {
-        --dim-gray: rgba(104, 104, 104, 1);
-        --bdazzled-blue: rgba(35, 87, 137, 1);
-        --fire-engine-red: rgba(193, 41, 46, 1);
-        --safety-yellow: rgba(241, 211, 2, 1);
-        --rich-black-fogra-39: rgba(0, 0, 0, 1);
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
       }
-
       body {
-        color: var(--up-maroon);
-        background-color: var(--bdazzled-blue);
+        background-image: linear-gradient(to top, #6dff6d, #e6d200, #ff8c24, #ff2690, #ff44ff);
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
         color: #fff;
         font-size: 20px;
+        padding: 10px;
       }
 
-      .topp {
-        min-height: 150px;
-        /* background-image: linear-gradient(#8459f9, #4c3196); */
-        background-color: var(--fire-engine-red);
-        border-bottom-left-radius: 50% 10%;
-        border-bottom-right-radius: 50% 10%;
-      }
-
-      .topp h1 {
+      h1 {
         margin: 0;
-        padding: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
       }
 
-      .kropp {
-        padding: 15px;
+      p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
       }
 
       a {
@@ -47,12 +41,7 @@
   </head>
 
   <body>
-    <div class="topp">
-      <h1>FjaaS as a Service</h1>
-    </div>
-
-    <div class="kropp">
-      <p>"Jeg elsker rekursive akronymer." - Jostein 2020</p>
-    </div>
+    <h1>FjaaS as a Service</h1>
+    <p>"Jeg elsker rekursive akronymer." - <a href="https://www.josteinskaar.no/">Jostein</a></p>
   </body>
 </html>

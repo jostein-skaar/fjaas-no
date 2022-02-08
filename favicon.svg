@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="50" height="50" version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <path transform="matrix(.93542 0 0 .81524 .085695 .24288)" d="m24.375 22.5-9.6214 5.4147-9.5-5.625 0.12139-11.04 9.6214-5.4147 9.5 5.625z" fill="#f4f"/>
+  <path transform="matrix(.93542 0 0 .81524 22.086 .24288)" d="m24.375 22.5-9.6214 5.4147-9.5-5.625 0.12139-11.04 9.6214-5.4147 9.5 5.625z" fill="#f4f"/>
+  <ellipse cx="25" cy="35" rx="15" ry="10" fill="#6dff6d"/>
+ </g>
+</svg>
