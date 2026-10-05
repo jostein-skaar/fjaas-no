@@ -52,7 +52,8 @@
       .game {
         display: flex;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.18);
+        background-color: rgba(30, 0, 40, 0.55);
+        backdrop-filter: blur(6px);
         border: 1px solid rgba(255, 255, 255, 0.4);
         border-radius: 16px;
         overflow: hidden;
@@ -138,7 +139,36 @@
       .button-secondary:hover {
         background-color: rgba(255, 255, 255, 0.2);
       }
+
+      .js .game {
+        opacity: 0;
+        transform: translateY(-80px) rotate(-4deg);
+        transition:
+          opacity 0.4s ease-out,
+          transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .js .game:nth-child(even) {
+        transform: translateY(-80px) rotate(4deg);
+      }
+
+      .js .game.visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .js .game,
+        .js .game:nth-child(even) {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
     </style>
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
   </head>
 
   <body>
@@ -417,5 +447,22 @@
         </div>
       </article>
     </main>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries
+            .filter((entry) => entry.isIntersecting)
+            .forEach((entry, i) => {
+              entry.target.style.transitionDelay = `${i * 120}ms`;
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.15 },
+      );
+
+      document.querySelectorAll('.game').forEach((game) => observer.observe(game));
+    </script>
   </body>
 </html>
