@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nb">
   <head>
     <meta charset="UTF-8" />
@@ -9,22 +9,24 @@
       html {
         margin: 0;
         padding: 0;
-        height: 100%;
+        min-height: 100%;
       }
       body {
         background-image: linear-gradient(to top, #6dff6d, #e6d200, #ff8c24, #ff2690, #ff44ff);
+        background-color: #ff44ff;
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
-        padding: 0;
+        padding: 10px;
         color: #fff;
         font-size: 20px;
-        padding: 10px;
+        min-height: 100vh;
+        box-sizing: border-box;
       }
 
       h1 {
         margin: 0;
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 5px;
         text-align: center;
       }
 
@@ -37,11 +39,383 @@
       a {
         color: inherit;
       }
+
+      .games {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+        gap: 24px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 6px;
+      }
+
+      .game {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .game-image {
+        display: block;
+        aspect-ratio: 4 / 3;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+
+      .game-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.2s ease;
+      }
+
+      .game-image:hover img {
+        transform: scale(1.03);
+      }
+
+      .game-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 16px 20px 20px;
+      }
+
+      .game h2 {
+        margin: 0;
+        font-size: 1.3em;
+      }
+
+      .game p {
+        margin: 0;
+        padding: 8px 0 0;
+        text-align: left;
+        font-size: 0.85em;
+        line-height: 1.4;
+      }
+
+      .game .game-date {
+        padding-top: 2px;
+        font-size: 0.75em;
+        opacity: 0.85;
+      }
+
+      .game-links {
+        display: flex;
+        gap: 10px;
+        margin-top: auto;
+        padding-top: 16px;
+      }
+
+      .button {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border: 2px solid #fff;
+        border-radius: 999px;
+        background-color: #fff;
+        color: #ff2690;
+        font-weight: bold;
+        font-size: 0.85em;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .button:hover {
+        background-color: #ffe9f4;
+      }
+
+      .button-secondary {
+        background-color: transparent;
+        color: #fff;
+      }
+
+      .button-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
     </style>
   </head>
 
   <body>
     <h1>FjaaS as a Service</h1>
     <p>"Jeg elsker rekursive akronymer." - <a href="https://www.josteinskaar.no/">Jostein</a></p>
+
+    <main class="games">
+      <article class="game">
+        <a href="https://pulumi.fjaas.no/" class="game-image">
+          <img
+            src="static/400/pulumi.jpg"
+            srcset="static/400/pulumi.jpg 400w, static/800/pulumi.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Dr Pulumi"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Dr Pulumi</h2>
+          <p class="game-date">Høsten 2024</p>
+          <p>
+            Et spill for å hedre Lars, vår mann i Pulumi-verdenen. Her skal du bevege deg rundt og "skyte" ned feil. Hvis man venter for
+            lenge vil feilene bare øke og øke.
+          </p>
+          <div class="game-links">
+            <a href="https://pulumi.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/dr-pulumi" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://confettiguy.fjaas.no/" class="game-image">
+          <img
+            src="static/400/confettiguy.jpg"
+            srcset="static/400/confettiguy.jpg 400w, static/800/confettiguy.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Confetti Guy"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Confetti Guy</h2>
+          <p class="game-date">Våren 2024</p>
+          <p>
+            Da favoritt-svensken vår Andy skulle slutte, var det liten tvil om hva som måtte til for å hedre ham. Han innførte nemlig
+            konfetti ved nye ordre.
+          </p>
+          <div class="game-links">
+            <a href="https://confettiguy.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/confetti-guy" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://superceline.fjaas.no/" class="game-image">
+          <img
+            src="static/400/superceline.jpg"
+            srcset="static/400/superceline.jpg 400w, static/800/superceline.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Super Celine"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Super Celine</h2>
+          <p class="game-date">Våren 2024</p>
+          <p>
+            Da Celine skulle bytte beite måtte jeg lage et enkelt spill for å takke for samarbeidet. Jeg lærte meg også et nytt ord på
+            engelsk.
+          </p>
+          <div class="game-links">
+            <a href="https://superceline.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/super-celine" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://lock-the-loo.fjaas.no/" class="game-image">
+          <img
+            src="static/400/lock-the-loo.jpg"
+            srcset="static/400/lock-the-loo.jpg 400w, static/800/lock-the-loo.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Lock the Loo"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Lock the Loo</h2>
+          <p class="game-date">Vinteren 2024</p>
+          <p>
+            Da en av verdens beste team leads glemte å låse dodøra, måtte jeg lage et spill for å hjelpe ham å bygge litt muskelminne. Hvert
+            level øker kvadratisk, så lykke til med å komme deg høyt i level.
+          </p>
+          <div class="game-links">
+            <a href="https://lock-the-loo.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/lock-the-loo" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://kingcalorie.fjaas.no/" class="game-image">
+          <img
+            src="static/400/kingcalorie.jpg"
+            srcset="static/400/kingcalorie.jpg 400w, static/800/kingcalorie.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra King Calorie"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>King Calorie</h2>
+          <p class="game-date">Høsten 2022</p>
+          <p>Henrik var nøye på kaloriene. I dette spillet gjelder det å hverken spise for mye eller for lite.</p>
+          <div class="game-links">
+            <a href="https://kingcalorie.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/king-calorie" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://oldemor.fjaas.no/" class="game-image">
+          <img
+            src="static/400/oldemor.jpg"
+            srcset="static/400/oldemor.jpg 400w, static/800/oldemor.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Oldemor i farta"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Oldemor i farta</h2>
+          <p class="game-date">Våren 2022</p>
+          <p>
+            Det er ikke bare bare å bli 90 år og navigere gårdsplassen når oldebarna slenger leker overalt. Men var det noen som klarte det,
+            så var det oldemor.
+          </p>
+          <div class="game-links">
+            <a href="https://oldemor.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/granny" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://nissen.fjaas.no/" class="game-image">
+          <img
+            src="static/400/nissen.jpg"
+            srcset="static/400/nissen.jpg 400w, static/800/nissen.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Nissen"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Nissen</h2>
+          <p class="game-date">Julen 2021</p>
+          <p>Ai ai, julenissen har mista alle gavene sine. Hjelp ham å samle flest mulig uten å få Korona.</p>
+          <div class="game-links">
+            <a href="https://nissen.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/nissen" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://korona.fjaas.no/" class="game-image">
+          <img
+            src="static/400/korona.jpg"
+            srcset="static/400/korona.jpg 400w, static/800/korona.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Såpus mot Korona"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Såpus mot Korona</h2>
+          <p class="game-date">Høsten 2021</p>
+          <p>
+            Såpen Såpus er i sin livs viktigste kamp. Nemlig mot horder av Koronaviruset. Velg mellom økende vanskelighetsgrad eller bare
+            stille og tilfredsstillende utryddelse av Koronaene.
+          </p>
+          <div class="game-links">
+            <a href="https://korona.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/korona" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://skyen.fjaas.no/" class="game-image">
+          <img
+            src="static/400/skyen.jpg"
+            srcset="static/400/skyen.jpg 400w, static/800/skyen.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Skyen"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Skyen</h2>
+          <p class="game-date">Vinteren 2020</p>
+          <p>
+            Et klassisk spill for å holde seg i lufta og samle ballonger. (Opprinnelig var det laget med logoen til dåværende arbeidsgiver,
+            og en morsom sak midt i Koronatiden.)
+          </p>
+          <div class="game-links">
+            <a href="https://skyen.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/skyen" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://slangespillet.fjaas.no/" class="game-image">
+          <img
+            src="static/400/slangespillet.jpg"
+            srcset="static/400/slangespillet.jpg 400w, static/800/slangespillet.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Slangespillet"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Slangespillet</h2>
+          <p class="game-date">Sommeren 2020</p>
+          <p>
+            Et av barna mine ville lage spill og kalte det "Slangespillet". Selv om hovedpersonen er en snegle. Planen var mange nivåer, men
+            det ble med ett. Enn så lenge.
+          </p>
+          <div class="game-links">
+            <a href="https://slangespillet.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/slangespillet" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://vaktmesteren.fjaas.no/" class="game-image">
+          <img
+            src="static/400/vaktmesteren.jpg"
+            srcset="static/400/vaktmesteren.jpg 400w, static/800/vaktmesteren.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Vaktmesteren"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Vaktmesteren</h2>
+          <p class="game-date">Våren 2020</p>
+          <p>
+            Familiens yngste ville også spille på iPad, så vi lagde Vaktmesteren med de eldre søskenene sine stemmer. Her gjelder det å
+            velge riktig farge.
+          </p>
+          <div class="game-links">
+            <a href="https://vaktmesteren.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/vaktmesteren" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <a href="https://bursdager.fjaas.no/" class="game-image">
+          <img
+            src="static/400/bursdager.jpg"
+            srcset="static/400/bursdager.jpg 400w, static/800/bursdager.jpg 800w"
+            sizes="(max-width: 440px) 100vw, 400px"
+            alt="Skjermbilde fra Bursdager"
+            loading="lazy"
+          />
+        </a>
+        <div class="game-content">
+          <h2>Bursdager</h2>
+          <p class="game-date">Våren 2020</p>
+          <p>
+            Det var stadig mas om bursdager og hvor lenge det er til bursdagen min. Mens eldstesønnen tegna, mente pappa at han skulle klare
+            å lage en app på en halvtime. (Det tok nok nærmere en time, men husk, dette var før AI-koding.)
+          </p>
+          <div class="game-links">
+            <a href="https://bursdager.fjaas.no/" class="button">Spill</a>
+            <a href="https://github.com/jostein-skaar/bursdager" class="button button-secondary">GitHub</a>
+          </div>
+        </div>
+      </article>
+    </main>
   </body>
 </html>
