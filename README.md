@@ -1,2 +1,0 @@
-# fjaasno
-www.fjaas.no
