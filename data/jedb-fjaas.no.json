@@ -20,6 +20,7 @@
         {
           "src": "images/pulumi/pulumi.jpg",
           "alt": "Skjermbilde fra Dr Pulumi",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/pulumi/pulumi.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=1LcgAQZ9d9aQoamJUwfte6kIZb8G7pn%2FoqXD%2FttYBUg%3D",
           "size": 174724
         }
       ]
@@ -41,6 +42,7 @@
         {
           "src": "images/confettiguy/confettiguy.jpg",
           "alt": "Skjermbilde fra Confetti Guy",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/confettiguy/confettiguy.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=WyrFup0mrpPiFaG%2FmNo6wM0RPqVy8r8f%2B7OBnNfT1D0%3D",
           "size": 314714
         }
       ]
@@ -62,6 +64,7 @@
         {
           "src": "images/superceline/superceline.jpg",
           "alt": "Skjermbilde fra Super Celine",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/superceline/superceline.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=Ma3EIZGgiF2tMVVS5eLViOQf2B0gYc7BUv7aIT8eUbs%3D",
           "size": 86651
         }
       ]
@@ -83,6 +86,7 @@
         {
           "src": "images/lock-the-loo/lock-the-loo.jpg",
           "alt": "Skjermbilde fra Lock the Loo",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/lock-the-loo/lock-the-loo.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=y3i4tN9NyqyUeSLfdRM2DwUjcpfclgKdmpnCqA8rRjs%3D",
           "size": 112416
         }
       ]
@@ -104,6 +108,7 @@
         {
           "src": "images/kingcalorie/kingcalorie.jpg",
           "alt": "Skjermbilde fra King Calorie",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/kingcalorie/kingcalorie.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=jZ3t4keywjERAb2eVlPJ%2Bqe1kFZ7fY%2FlMnK4tm0Rnpo%3D",
           "size": 93386
         }
       ]
@@ -125,6 +130,7 @@
         {
           "src": "images/oldemor/oldemor.jpg",
           "alt": "Skjermbilde fra Oldemor i farta",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/oldemor/oldemor.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=HKn29%2BO3BfQuHYueasKXDxTBZHldak1XLrtLD58leyw%3D",
           "size": 160188
         }
       ]
@@ -146,6 +152,7 @@
         {
           "src": "images/nissen/nissen.jpg",
           "alt": "Skjermbilde fra Nissen",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/nissen/nissen.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=F4%2FxrWxkOKOPJODXqEIAXOfK9WzOpOglp2n%2FvfpgU6U%3D",
           "size": 403201
         }
       ]
@@ -167,6 +174,7 @@
         {
           "src": "images/korona/korona.jpg",
           "alt": "Skjermbilde fra Såpus mot Korona",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/korona/korona.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=FsR2GcUq5MaJRcw6o8g4LpRpyNgRxYKDgnbWorFZR7E%3D",
           "size": 100348
         }
       ]
@@ -188,6 +196,7 @@
         {
           "src": "images/slangespillet/slangespillet.jpg",
           "alt": "Skjermbilde fra Slangespillet",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/slangespillet/slangespillet.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=gprn1iZCUANkATdLsIh9B1%2Fokm%2FpNpBc5VM8ZkFeKpI%3D",
           "size": 179113
         }
       ]
@@ -209,6 +218,7 @@
         {
           "src": "images/bursdager/bursdager.jpg",
           "alt": "Skjermbilde fra Bursdager",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/bursdager/bursdager.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=TRzpv32%2FazuXBsc9DRAkEguKihZiFXayMPgqzh%2FKCq8%3D",
           "size": 312771
         }
       ]
@@ -230,6 +240,7 @@
         {
           "src": "images/vaktmesteren/2026-10-05-11-23-01.jpg",
           "alt": "Skjermbilde fra Vaktmesteren",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/vaktmesteren/2026-10-05-11-23-01.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=NY9j4EGiMBU%2BOxuT0uadK%2FQOns0ey7lcEaYCdAgrflo%3D",
           "size": 297012
         }
       ]
@@ -251,9 +262,11 @@
         {
           "src": "images/skyen/skyen.jpg",
           "alt": "Skjermbilde fra Skyen",
+          "url": "https://jedb0894c4555a2f68bce2c9.blob.core.windows.net/cvimages/jostein/projects-fun/skyen/skyen.jpg?sv=2026-10-06&st=2026-10-08T20%3A24%3A34Z&se=2026-10-08T21%3A29%3A34Z&sr=b&sp=r&sig=ZC9B3KlE5dtTaMCsGw%2F%2BbWq3I8M9h8%2BIbUYsOG5sGhE%3D",
           "size": 76397
         }
       ]
     }
-  ]
+  ],
+  "urlsExpireAt": "2026-10-08T21:29:34.277Z"
 }
