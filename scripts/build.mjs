@@ -22,9 +22,9 @@ const fail = (message) => {
 // for å bli oversett.
 const JSON_NAME = `jedb-${EXPORTED_FOR}.json`
 const files = await readdir(DATA).catch(() => [])
-const misnamed = files.filter((file) => /^jedb-.*.(json|zip)$/i.test(file) && file !== JSON_NAME)
+const misnamed = files.filter((file) => /^jedb-.*\.json$/i.test(file) && file !== JSON_NAME)
 if (misnamed.length) fail(`${misnamed.join(', ')} i ${DATA}/ har feil navn, filen skal hete ${JSON_NAME}`)
-if (!files.includes(JSON_NAME)) fail(`${DATA}/${JSON_NAME} mangler`)
+if (!files.includes(JSON_NAME)) fail(`${DATA}/${JSON_NAME} finnes ikke, last ned eksporten fra JEDB og legg den i ${DATA}/`)
 
 const source = `${DATA}/${JSON_NAME}`
 let cv
@@ -44,9 +44,9 @@ if (games.length === 0) fail('ingen projects-fun i eksporten')
 const imagePath = (game) => `${DATA}/${game.images[0].src}`
 for (const game of games) {
   if (game.images.length === 0) fail(`${game.slug} har ingen bilder`)
-  // Bildene ligger som egne filer i data/. Nye bilder hentes med scripts/fetch-images.mjs.
+  // Bildene ligger som filer i data/<src>. Et nytt spill eller bilde krever at fetch-images.mjs er kjørt.
   if (!existsSync(imagePath(game))) {
-    fail(`${imagePath(game)} mangler, kjør: node scripts/fetch-images.mjs ${source} ${DATA}`)
+    fail(`bildet (${game.slug}) ${game.images[0].src} mangler i ${DATA}/, kjør scripts/fetch-images.mjs (node scripts/fetch-images.mjs ${source} ${DATA})`)
   }
 }
 
@@ -89,6 +89,12 @@ const card = (game) => {
       </article>`
 }
 
+// "8. oktober 2026 17:38", i norsk tid uansett hvor bygget kjører.
+const exportedAt = new Date(cv.exportedAt)
+if (Number.isNaN(exportedAt.getTime())) fail(`${source} mangler gyldig exportedAt`)
+const oslo = (options) => exportedAt.toLocaleString('nb-NO', { timeZone: 'Europe/Oslo', ...options })
+const updated = `Sist oppdatert: ${oslo({ day: 'numeric', month: 'long', year: 'numeric' })} ${oslo({ hour: '2-digit', minute: '2-digit', hour12: false })}`
+
 await rm(OUT, { recursive: true, force: true })
 await mkdir(OUT, { recursive: true })
 await Promise.all(FILES.map((file) => copyFile(file, `${OUT}/${file}`)))
@@ -99,7 +105,7 @@ await writeFile(
   `${OUT}/index.html`,
   template
     .replace('<!-- GAMES -->', () => games.map(card).join('\n').trimStart())
-    .replace('<!-- YEAR -->', new Date().getFullYear()),
+    .replace('<!-- UPDATED -->', updated),
 )
 
 // Bare hovedbildet (det første) brukes. Bildene blir aldri forstørret: er originalen
