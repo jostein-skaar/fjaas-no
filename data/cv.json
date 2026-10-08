@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "exportedFor": "fjaas.no",
+  "exportedAt": "2026-10-08T07:29:15.830Z",
+  "items": [
+    {
+      "section": "projects-fun",
+      "slug": "pulumi",
+      "title": "Dr Pulumi",
+      "from": "2024-09",
+      "to": "2024-09",
+      "url": "https://pulumi.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/dr-pulumi",
+      "links": [],
+      "roles": [],
+      "description": "Et spill for å hedre Lars, vår mann i Pulumi-verdenen. Her skal du bevege deg rundt og \"skyte\" ned feil. Hvis man venter for lenge vil feilene bare øke og øke og øke.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/pulumi/pulumi.jpg",
+          "alt": "Skjermbilde fra Dr Pulumi"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "confettiguy",
+      "title": "Confetti Guy",
+      "from": "2024-03",
+      "to": "2024-03",
+      "url": "https://confettiguy.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/confetti-guy",
+      "links": [],
+      "roles": [],
+      "description": "Da favoritt-svensken vår Andy skulle slutte, var det liten tvil om hva som måtte til for å hedre ham. Han innførte nemlig konfetti ved nye ordre.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/confettiguy/confettiguy.jpg",
+          "alt": "Skjermbilde fra Confetti Guy"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "superceline",
+      "title": "Super Celine",
+      "from": "2024-03",
+      "to": "2024-03",
+      "url": "https://superceline.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/super-celine",
+      "links": [],
+      "roles": [],
+      "description": "Da Celine skulle bytte beite måtte jeg lage et enkelt spill for å takke for samarbeidet. Jeg lærte meg også et nytt ord på engelsk.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/superceline/superceline.jpg",
+          "alt": "Skjermbilde fra Super Celine"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "lock-the-loo",
+      "title": "Lock the Loo",
+      "from": "2024-01",
+      "to": "2024-01",
+      "url": "https://lock-the-loo.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/lock-the-loo",
+      "links": [],
+      "roles": [],
+      "description": "Da en av verdens beste team leads glemte å låse dodøra, måtte jeg lage et spill for å hjelpe ham å bygge litt muskelminne. Hvert level øker kvadratisk, så lykke til med å komme deg høyt i level.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/lock-the-loo/lock-the-loo.jpg",
+          "alt": "Skjermbilde fra Lock the Loo"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "kingcalorie",
+      "title": "King Calorie",
+      "from": "2022-09",
+      "to": "2022-09",
+      "url": "https://kingcalorie.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/king-calorie",
+      "links": [],
+      "roles": [],
+      "description": "Henrik var nøye på kaloriene. I dette spillet gjelder det å hverken spise for mye eller for lite. Kanskje du blir overrasket over hvor mange kalorier noe har?",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/kingcalorie/kingcalorie.jpg",
+          "alt": "Skjermbilde fra King Calorie"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "oldemor",
+      "title": "Oldemor i farta",
+      "from": "2022-03",
+      "to": "2022-03",
+      "url": "https://oldemor.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/granny",
+      "links": [],
+      "roles": [],
+      "description": "Det er ikke bare bare å bli 90 år og navigere gårdsplassen når oldebarna slenger leker overalt. Men var det noen som klarte det, så var det oldemor.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/oldemor/oldemor.jpg",
+          "alt": "Skjermbilde fra Oldemor i farta"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "nissen",
+      "title": "Nissen",
+      "from": "2021-12",
+      "to": "2021-12",
+      "url": "https://nissen.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/nissen",
+      "links": [],
+      "roles": [],
+      "description": "Ai ai, julenissen har mista alle gavene sine. Hjelp ham å samle flest mulig uten å få Korona.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/nissen/nissen.jpg",
+          "alt": "Skjermbilde fra Nissen"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "korona",
+      "title": "Såpus mot Korona",
+      "from": "2021-09",
+      "to": "2021-09",
+      "url": "https://korona.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/korona",
+      "links": [],
+      "roles": [],
+      "description": "Såpen Såpus er i sin livs viktigste kamp. Nemlig mot horder av Koronaviruset. Velg mellom økende vanskelighetsgrad eller bare stille og tilfredsstillende utryddelse av Koronaene.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/korona/korona.jpg",
+          "alt": "Skjermbilde fra Såpus mot Korona"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "slangespillet",
+      "title": "Slangespillet",
+      "from": "2020-06",
+      "to": "2020-06",
+      "url": "https://slangespillet.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/slangespillet",
+      "links": [],
+      "roles": [],
+      "description": "Et av barna mine ville lage spill og kalte det \"Slangespillet\". Selv om hovedpersonen er en snegle. Planen var mange nivåer, men det ble med ett. Enn så lenge.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/slangespillet/slangespillet.jpg",
+          "alt": "Skjermbilde fra Slangespillet"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "bursdager",
+      "title": "Bursdager",
+      "from": "2020-03",
+      "to": "2020-03",
+      "url": "https://bursdager.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/bursdager",
+      "links": [],
+      "roles": [],
+      "description": "Det var stadig mas om bursdager og hvor lenge det er til bursdagen min. Mens eldstesønnen tegna, mente pappa at han skulle klare å lage en app på en halvtime. (Det tok nok litt lengre tid, men husk, dette var før AI-koding.)",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/bursdager/bursdager.jpg",
+          "alt": "Skjermbilde fra Bursdager"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "vaktmesteren",
+      "title": "Vaktmesteren",
+      "from": "2020-03",
+      "to": "2020-03",
+      "url": "https://vaktmesteren.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/vaktmesteren",
+      "links": [],
+      "roles": [],
+      "description": "Familiens yngste ville også spille på iPad, så vi lagde Vaktmesteren med de eldre søskenene sine stemmer. Her gjelder det å velge riktig farge.",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/vaktmesteren/vaktmesteren.jpg",
+          "alt": "Skjermbilde fra Vaktmesteren"
+        }
+      ]
+    },
+    {
+      "section": "projects-fun",
+      "slug": "skyen",
+      "title": "Skyen",
+      "from": "2020-01",
+      "to": "2020-01",
+      "url": "https://skyen.fjaas.no/",
+      "github": "https://github.com/jostein-skaar/skyen",
+      "links": [],
+      "roles": [],
+      "description": "Et klassisk spill for å holde seg i lufta og samle ballonger. (Opprinnelig var det laget med logoen til dåværende arbeidsgiver, og en morsom sak midt i Koronatiden.)",
+      "summary": "",
+      "tags": [],
+      "images": [
+        {
+          "src": "images/skyen/skyen.jpg",
+          "alt": "Skjermbilde fra Skyen"
+        }
+      ]
+    }
+  ]
+}

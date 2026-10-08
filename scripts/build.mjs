@@ -18,12 +18,30 @@ const fail = (message) => {
 }
 
 // Eksporten er input som ikke skal redigeres for hånd: ny zip fra JEDB erstatter den gamle.
-const zips = (await readdir(DATA).catch(() => [])).filter((file) => /^jedb-.*\.zip$/.test(file))
+const files = await readdir(DATA).catch(() => [])
+const zips = files.filter((file) => /^jedb-.*\.zip$/.test(file))
 if (zips.length !== 1) fail(`forventet nøyaktig én jedb-*.zip i ${DATA}/, fant ${zips.length}`)
 const zip = unzipSync(new Uint8Array(await readFile(`${DATA}/${zips[0]}`)))
 
 const entry = (path) => zip[path] ?? fail(`${path} mangler i ${zips[0]}`)
-const cv = JSON.parse(strFromU8(entry('cv.json')))
+
+// Ved rene tekstendringer holder det å laste ned cv.json fra JEDB og legge den i data/.
+// Som med zip-en skal det ligge maks én (også "cv (1).json" fra nettleseren telles med).
+// Den løse filen brukes bare hvis exportedAt er nyere enn cv.json i zip-en.
+const jsons = files.filter((file) => /^cv.*\.json$/i.test(file))
+if (jsons.length > 1) fail(`forventet maks én cv*.json i ${DATA}/, fant ${jsons.length}: ${jsons.join(', ')}`)
+
+const parse = (text, name) => {
+  try {
+    return JSON.parse(text)
+  } catch (error) {
+    fail(`${name} er ikke gyldig JSON: ${error.message}`)
+  }
+}
+const zipped = parse(strFromU8(entry('cv.json')), `cv.json i ${zips[0]}`)
+const loose = jsons.length ? parse(await readFile(`${DATA}/${jsons[0]}`, 'utf8'), `${DATA}/${jsons[0]}`) : null
+const cv = loose?.exportedAt > zipped.exportedAt ? loose : zipped
+const source = cv === loose ? `${DATA}/${jsons[0]}` : zips[0]
 if (cv.schemaVersion !== SCHEMA_VERSION) {
   fail(`cv.json har schemaVersion ${cv.schemaVersion}, bygget kjenner bare ${SCHEMA_VERSION}`)
 }
@@ -34,6 +52,8 @@ const games = cv.items.filter((item) => item.section === 'projects-fun')
 if (games.length === 0) fail('ingen projects-fun i eksporten')
 for (const game of games) {
   if (game.images.length === 0) fail(`${game.slug} har ingen bilder`)
+  // Bildene finnes bare i zip-en. Et nytt spill eller bilde krever en ny zip-eksport.
+  if (!zip[game.images[0].src]) fail(`${game.images[0].src} mangler i ${zips[0]}, eksporter en ny zip fra JEDB`)
 }
 
 const escapeHtml = (text) => text.replace(/[&<>"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[char])
@@ -100,4 +120,4 @@ await Promise.all(
   }),
 )
 
-console.log(`Skrev ${OUT}/index.html (${games.length} spill, ${WIDTHS.length} bildestørrelser, fra ${zips[0]})`)
+console.log(`Skrev ${OUT}/index.html (${games.length} spill, ${WIDTHS.length} bildestørrelser, fra ${source})`)
