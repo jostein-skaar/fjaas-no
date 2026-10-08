@@ -109,7 +109,12 @@ await Promise.all(FILES.map((file) => copyFile(file, `${OUT}/${file}`)))
 
 const template = await readFile('index.html', 'utf8')
 if (!template.includes('<!-- GAMES -->')) fail('index.html mangler <!-- GAMES -->')
-await writeFile(`${OUT}/index.html`, template.replace('<!-- GAMES -->', () => games.map(card).join('\n').trimStart()))
+await writeFile(
+  `${OUT}/index.html`,
+  template
+    .replace('<!-- GAMES -->', () => games.map(card).join('\n').trimStart())
+    .replace('<!-- YEAR -->', new Date().getFullYear()),
+)
 
 // Bare hovedbildet (det første) brukes. Bildene blir aldri forstørret: er originalen
 // smalere enn bredden, beholdes originalbredden.
