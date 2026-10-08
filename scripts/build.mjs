@@ -8,7 +8,7 @@ const DATA = 'data'
 const OUT = 'dist'
 const WIDTHS = [400, 800, 1200, 1600]
 const FILES = ['favicon.svg']
-const SCHEMA_VERSION = 1
+const SCHEMA_VERSION = 2
 const EXPORTED_FOR = 'fjaas.no'
 const SIZES = '(max-width: 700px) calc(100vw - 32px), (max-width: 1050px) calc(50vw - 30px), 380px'
 
@@ -90,9 +90,9 @@ const card = (game) => {
 }
 
 // "8. oktober 2026 17:38", i norsk tid uansett hvor bygget kjører.
-const exportedAt = new Date(cv.exportedAt)
-if (Number.isNaN(exportedAt.getTime())) fail(`${source} mangler gyldig exportedAt`)
-const oslo = (options) => exportedAt.toLocaleString('nb-NO', { timeZone: 'Europe/Oslo', ...options })
+const changedAt = new Date(cv.changedAt)
+if (Number.isNaN(changedAt.getTime())) fail(`${source} mangler gyldig changedAt`)
+const oslo = (options) => changedAt.toLocaleString('nb-NO', { timeZone: 'Europe/Oslo', ...options })
 const updated = `Sist oppdatert: ${oslo({ day: 'numeric', month: 'long', year: 'numeric' })} ${oslo({ hour: '2-digit', minute: '2-digit', hour12: false })}`
 
 await rm(OUT, { recursive: true, force: true })
