@@ -157,6 +157,49 @@
         transform: none;
       }
 
+      /* Bunnen av gradienten er lysegrønn, så footeren har mørk tekst i stedet for hvit. */
+      footer {
+        padding: 20px 10px 40px;
+        color: rgba(30, 0, 40, 0.75);
+        font-size: 0.75em;
+        text-align: center;
+      }
+
+      /* JEDB i footeren: hover (mus) eller klikk/trykk (fokus) viser forklaringen. */
+      abbr[data-tip] {
+        position: relative;
+        text-decoration: underline dotted;
+        cursor: pointer;
+      }
+
+      abbr[data-tip]:focus {
+        outline: none;
+      }
+
+      abbr[data-tip]::after {
+        content: attr(data-tip);
+        display: none;
+        position: absolute;
+        bottom: 1.6em;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        padding: 5px 10px;
+        border-radius: 8px;
+        background-color: rgba(30, 0, 40, 0.85);
+        color: #fff;
+      }
+
+      abbr[data-tip]:focus::after {
+        display: block;
+      }
+
+      @media (hover: hover) {
+        abbr[data-tip]:hover::after {
+          display: block;
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .js .game,
         .js .game:nth-child(even) {
@@ -417,6 +460,8 @@
         </div>
       </article>
     </main>
+
+    <footer>Generert fra <abbr tabindex="0" data-tip="Jostein's Everything Database">JEDB</abbr> · 2026</footer>
 
     <script>
       const observer = new IntersectionObserver(
