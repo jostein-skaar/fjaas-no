@@ -10,6 +10,7 @@ const OUT = 'dist'
 const WIDTHS = [400, 800, 1200, 1600]
 const FILES = ['favicon.svg']
 const SCHEMA_VERSION = 1
+const EXPORTED_FOR = 'fjaas.no'
 const SIZES = '(max-width: 700px) calc(100vw - 32px), (max-width: 1050px) calc(50vw - 30px), 380px'
 
 const fail = (message) => {
@@ -25,11 +26,13 @@ const zip = unzipSync(new Uint8Array(await readFile(`${DATA}/${zips[0]}`)))
 
 const entry = (path) => zip[path] ?? fail(`${path} mangler i ${zips[0]}`)
 
-// Ved rene tekstendringer holder det å laste ned cv.json fra JEDB og legge den i data/.
-// Som med zip-en skal det ligge maks én (også "cv (1).json" fra nettleseren telles med).
-// Den løse filen brukes bare hvis exportedAt er nyere enn cv.json i zip-en.
-const jsons = files.filter((file) => /^cv.*\.json$/i.test(file))
-if (jsons.length > 1) fail(`forventet maks én cv*.json i ${DATA}/, fant ${jsons.length}: ${jsons.join(', ')}`)
+// Ved rene tekstendringer holder det å laste ned jedb-fjaas.no.json fra JEDB og legge den i data/.
+// Navnet må være nøyaktig det, så "jedb-fjaas.no (1).json" fra nettleseren stopper bygget i stedet
+// for å bli oversett. Den løse filen brukes bare hvis exportedAt er nyere enn cv.json i zip-en.
+const JSON_NAME = `jedb-${EXPORTED_FOR}.json`
+const misnamed = files.filter((file) => /^jedb-.*\.json$/i.test(file) && file !== JSON_NAME)
+if (misnamed.length) fail(`${misnamed.join(', ')} i ${DATA}/ har feil navn, filen skal hete ${JSON_NAME}`)
+const jsons = files.filter((file) => file === JSON_NAME)
 
 const parse = (text, name) => {
   try {
@@ -44,6 +47,11 @@ const cv = loose?.exportedAt > zipped.exportedAt ? loose : zipped
 const source = cv === loose ? `${DATA}/${jsons[0]}` : zips[0]
 if (cv.schemaVersion !== SCHEMA_VERSION) {
   fail(`cv.json har schemaVersion ${cv.schemaVersion}, bygget kjenner bare ${SCHEMA_VERSION}`)
+}
+// Begge eksportene er gyldige mot skjemaet, så uten denne sjekken ville en eksport for
+// josteinskaar.no bygget feil side i stillhet.
+for (const [name, data] of [[zips[0], zipped], ...(loose ? [[`${DATA}/${jsons[0]}`, loose]] : [])]) {
+  if (data.exportedFor !== EXPORTED_FOR) fail(`${name} er eksportert for ${data.exportedFor}, ikke ${EXPORTED_FOR}`)
 }
 const validate = new Ajv2020({ strict: false }).compile(JSON.parse(strFromU8(entry('cv.schema.json'))))
 if (!validate(cv)) fail(`cv.json følger ikke cv.schema.json:\n${JSON.stringify(validate.errors, null, 2)}`)
