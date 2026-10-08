@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "exportedFor": "fjaas.no",
-  "exportedAt": "2026-10-08T09:45:21.577Z",
+  "exportedAt": "2026-10-08T14:20:53.782Z",
   "items": [
     {
       "section": "projects-fun",
@@ -19,7 +19,8 @@
       "images": [
         {
           "src": "images/pulumi/pulumi.jpg",
-          "alt": "Skjermbilde fra Dr Pulumi"
+          "alt": "Skjermbilde fra Dr Pulumi",
+          "size": 174724
         }
       ]
     },
@@ -39,7 +40,8 @@
       "images": [
         {
           "src": "images/confettiguy/confettiguy.jpg",
-          "alt": "Skjermbilde fra Confetti Guy"
+          "alt": "Skjermbilde fra Confetti Guy",
+          "size": 314714
         }
       ]
     },
@@ -59,7 +61,8 @@
       "images": [
         {
           "src": "images/superceline/superceline.jpg",
-          "alt": "Skjermbilde fra Super Celine"
+          "alt": "Skjermbilde fra Super Celine",
+          "size": 86651
         }
       ]
     },
@@ -79,7 +82,8 @@
       "images": [
         {
           "src": "images/lock-the-loo/lock-the-loo.jpg",
-          "alt": "Skjermbilde fra Lock the Loo"
+          "alt": "Skjermbilde fra Lock the Loo",
+          "size": 112416
         }
       ]
     },
@@ -99,7 +103,8 @@
       "images": [
         {
           "src": "images/kingcalorie/kingcalorie.jpg",
-          "alt": "Skjermbilde fra King Calorie"
+          "alt": "Skjermbilde fra King Calorie",
+          "size": 93386
         }
       ]
     },
@@ -119,7 +124,8 @@
       "images": [
         {
           "src": "images/oldemor/oldemor.jpg",
-          "alt": "Skjermbilde fra Oldemor i farta"
+          "alt": "Skjermbilde fra Oldemor i farta",
+          "size": 160188
         }
       ]
     },
@@ -139,7 +145,8 @@
       "images": [
         {
           "src": "images/nissen/nissen.jpg",
-          "alt": "Skjermbilde fra Nissen"
+          "alt": "Skjermbilde fra Nissen",
+          "size": 403201
         }
       ]
     },
@@ -159,7 +166,8 @@
       "images": [
         {
           "src": "images/korona/korona.jpg",
-          "alt": "Skjermbilde fra Såpus mot Korona"
+          "alt": "Skjermbilde fra Såpus mot Korona",
+          "size": 100348
         }
       ]
     },
@@ -179,7 +187,8 @@
       "images": [
         {
           "src": "images/slangespillet/slangespillet.jpg",
-          "alt": "Skjermbilde fra Slangespillet"
+          "alt": "Skjermbilde fra Slangespillet",
+          "size": 179113
         }
       ]
     },
@@ -199,7 +208,8 @@
       "images": [
         {
           "src": "images/bursdager/bursdager.jpg",
-          "alt": "Skjermbilde fra Bursdager"
+          "alt": "Skjermbilde fra Bursdager",
+          "size": 312771
         }
       ]
     },
@@ -219,7 +229,8 @@
       "images": [
         {
           "src": "images/vaktmesteren/vaktmesteren.jpg",
-          "alt": "Skjermbilde fra Vaktmesteren"
+          "alt": "Skjermbilde fra Vaktmesteren",
+          "size": 293829
         }
       ]
     },
@@ -239,7 +250,8 @@
       "images": [
         {
           "src": "images/skyen/skyen.jpg",
-          "alt": "Skjermbilde fra Skyen"
+          "alt": "Skjermbilde fra Skyen",
+          "size": 76397
         }
       ]
     }
