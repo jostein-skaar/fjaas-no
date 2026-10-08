@@ -10,15 +10,14 @@ en melding hvis et bilde mangler. Ikke rediger innholdet her, endre det i JEDB o
 
 ## Rutine etter en eksport
 
-- **Rene tekstendringer:** last ned `jedb-fjaas.no.json` fra JEDB og legg den i `data/` (navnet må være nøyaktig
-  det, erstatt den gamle).
-- **Nye eller endrede bilder:** samme, men bildene må hentes innen en time etter eksporten (lenkene i JSON-en
-  utløper). Kjør lokalt:
+Last ned `jedb-fjaas.no.json` fra JEDB og legg den i `data/` med nøyaktig dette navnet, slik at den erstatter den
+gamle eksporten. Kjør så:
 
-  ```
-  node scripts/fetch-images.mjs data/jedb-fjaas.no.json data
-  ```
+```
+npm run update
+```
 
-  Scriptet laster ned bilder som mangler, hopper over de som allerede finnes, og fjerner de midlertidige lenkene
-  fra JSON-en. Commit så JSON-en og de nye bildene. Hvis noe feiler, står JSON-en urørt og scriptet kan kjøres på nytt
-  innen timen.
+Kommandoen henter bilder fra eksporten og bygger siden. Bildefilene må hentes innen lenkene utløper, vanligvis innen
+en time. Eksporten fra JEDB må fortsatt lastes ned manuelt; `update` henter ikke selve innholdsdataene. Hvis
+nedlasting feiler, beholdes lenkene i JSON-en slik at du kan prøve igjen før de utløper. Etter en vellykket kjøring
+fjernes de midlertidige lenkene fra JSON-en.
